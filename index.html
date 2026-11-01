@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Portfolio Chyntia Contance Laura, S.Kom. - Information Technology, Database Management, Administration, Social Media Management and Digital Content.">
+
+    <title>Portfolio | Chyntia Contance Laura</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+        }
+
+        .glass {
+            background: rgba(30, 41, 59, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(148, 163, 184, 0.12);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #60a5fa, #818cf8, #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: #1e293b;
+            border: 1px solid rgba(148, 163, 184, 0.12);
+            border-radius: 18px;
+            padding: 24px;
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #6366f1;
+        }
+
+        .tag {
+            display: inline-block;
+            background: rgba(99, 102, 241, 0.15);
+            color: #a5b4fc;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            margin: 4px 3px 4px 0;
+        }
+
+        .nav-link {
+            color: #cbd5e1;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #60a5fa;
+        }
+
+        .timeline {
+            border-left: 2px solid #475569;
+            padding-left: 25px;
+            margin-left: 8px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 35px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -34px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #818cf8;
+            border: 3px solid #0f172a;
+        }
+
+        section {
+            scroll-margin-top: 100px;
+        }
+
+        /* PROJECT IMAGE */
+
+        .project-image {
+            display: block;
+            width: 100%;
+            height: 190px;
+            object-fit: contain;
+            object-position: center;
+            background: #0f172a;
+            border-radius: 12px;
+            padding: 8px;
+            margin-bottom: 18px;
+        }
+
+        /* ACADEMIC PROJECT GRID */
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-auto-rows: 1fr;
+            gap: 24px;
+            align-items: stretch;
+        }
+
+        .project-card {
+            min-width: 0;
+            min-height: 370px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            background: #1e293b;
+            border: 1px solid rgba(148, 163, 184, 0.16);
+            border-radius: 18px;
+            padding: 16px;
+            transition: transform .25s ease, border-color .25s ease;
+        }
+
+        .project-card:hover,
+        .professional-card:hover {
+            transform: translateY(-5px);
+            border-color: #6366f1;
+        }
+
+        .project-card .project-image {
+            height: 180px;
+            flex: 0 0 180px;
+        }
+
+        .project-card h3 {
+            color: #f1f5f9;
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+
+        .project-card p {
+            color: #94a3b8;
+            font-size: .875rem;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .project-card .tag,
+        .project-card .project-link {
+            margin-top: auto;
+            align-self: flex-start;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #60a5fa;
+            font-size: .875rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .project-link:hover {
+            color: #93c5fd;
+        }
+
+        /* PROFESSIONAL PROJECTS */
+
+        .professional-projects {
+            margin-top: 64px;
+        }
+
+        .section-subtitle {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+        }
+
+        .professional-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+            align-items: stretch;
+        }
+
+        .professional-card {
+            min-width: 0;
+            min-height: 260px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            background: #1e293b;
+            border: 1px solid rgba(148, 163, 184, 0.16);
+            border-radius: 18px;
+            padding: 24px;
+            transition: transform .25s ease, border-color .25s ease;
+        }
+
+        .professional-icon {
+            color: #60a5fa;
+            font-size: 1.8rem;
+            margin-bottom: 18px;
+        }
+
+        .professional-icon.indigo {
+            color: #818cf8;
+        }
+
+        .professional-card h4 {
+            color: #f1f5f9;
+            font-size: 1.1rem;
+            font-weight: 700;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .professional-card p {
+            color: #94a3b8;
+            font-size: .9rem;
+            line-height: 1.8;
+            margin-bottom: 22px;
+        }
+
+        .professional-card .project-link {
+            margin-top: auto;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 900px) {
+
+            .project-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+        }
+
+        @media (max-width: 640px) {
+
+            .project-grid,
+            .professional-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-card,
+            .professional-card {
+                min-height: 0;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="fixed top-0 left-0 w-full z-50 glass">
+
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+        <a href="#home" class="text-xl font-extrabold tracking-wider gradient-text">
+            PORTFOLIO.
+        </a>
+
+        <div class="hidden md:flex gap-8 text-sm font-semibold">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+
+        <button id="menuBtn" class="md:hidden text-xl text-white" aria-label="Buka menu">
+            <i class="fas fa-bars"></i>
+        </button>
+
+    </nav>
+
+    <div id="mobileMenu" class="hidden md:hidden px-6 pb-5 space-y-4 text-sm">
+
+        <a href="#home" class="block nav-link">Home</a>
+        <a href="#about" class="block nav-link">About</a>
+        <a href="#experience" class="block nav-link">Experience</a>
+        <a href="#skills" class="block nav-link">Skills</a>
+        <a href="#projects" class="block nav-link">Projects</a>
+        <a href="#education" class="block nav-link">Education</a>
+        <a href="#contact" class="block nav-link">Contact</a>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section id="home" class="min-h-screen flex items-center pt-28 pb-16">
+
+    <div class="max-w-7xl mx-auto px-6 w-full grid md:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-16 items-center">
+
+        <!-- PROFIL / TEKS -->
+
+        <div class="order-2 md:order-1 text-center md:text-left">
+
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight mb-5">
+                CHYNTIA<br>
+                <span class="gradient-text">CONTANCE LAURA</span>
+            </h1>
+
+            <h2 class="text-lg sm:text-xl text-slate-300 font-semibold mb-5">
+                S.Kom. | Information Technology Graduate
+            </h2>
+
+            <p class="text-slate-400 leading-8 mb-8 max-w-2xl mx-auto md:mx-0">
+
+                Lulusan Teknik Informatika dengan predikat Cumlaude dan pemegang sertifikasi internasional Alibaba Cloud. Memiliki pengalaman di bidang teknologi informasi, administrasi, pengelolaan data, dan media sosial.
+            </p>
+
+            <div class="flex flex-wrap justify-center md:justify-start gap-4">
+
+                
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOTO PROFIL -->
+
+        <div class="order-1 md:order-2 flex justify-center md:justify-end items-center">
+
+            <div class="relative w-full max-w-[320px] sm:max-w-[360px] md:max-w-[390px]">
+
+                <div class="absolute -inset-4 bg-indigo-500/20 blur-3xl rounded-full"></div>
+
+                <div class="relative rounded-[28px] border border-slate-600/70 bg-slate-800/80 p-3 shadow-2xl">
+
+                    <img
+                        src="gambar chyntia cv.jpeg"
+                        onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=700'"
+                        alt="Foto Chyntia Contance Laura"
+                        class="w-full h-[390px] sm:h-[450px] md:h-[490px] object-contain object-top rounded-2xl"
+                    >
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= METRICS ================= -->
+
+<section class="pb-20">
+
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-5">
+
+        <div class="card text-center">
+            <h3 class="text-3xl font-extrabold text-blue-400">3.51</h3>
+            <p class="text-sm text-slate-400 mt-2">GPA / Cumlaude</p>
+        </div>
+
+        <div class="card text-center">
+            <h3 class="text-3xl font-extrabold text-indigo-400">90</h3>
+            <p class="text-sm text-slate-400 mt-2">Days Internship</p>
+        </div>
+
+        <div class="card text-center">
+            <h3 class="text-3xl font-extrabold text-amber-400">Cloud</h3>
+            <p class="text-sm text-slate-400 mt-2">Certification</p>
+        </div>
+
+        <div class="card text-center">
+            <h3 class="text-3xl font-extrabold text-purple-400">IoT</h3>
+            <p class="text-sm text-slate-400 mt-2">Research Project</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="py-20 bg-slate-900/50">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <h2 class="section-title">
+            About <span class="gradient-text">Me</span>
+        </h2>
+
+        <div class="card">
+
+            <p class="text-slate-300 leading-8">
+
+                Saya merupakan lulusan S1 Teknik Informatika dari Universitas Advent Indonesia dengan predikat Cumlaude dan IPK 3.51. Saya memiliki sertifikasi internasional Alibaba Cloud serta ketertarikan untuk mengembangkan karier di bidang teknologi informasi, administrasi, pengelolaan data, dan digital.
+
+Saya memiliki pengalaman sebagai IT Specialist Intern dengan keterlibatan dalam pengolahan data, pengelolaan database, pengembangan website, serta dukungan teknis. Pengalaman tersebut membantu saya membangun pemahaman mengenai penerapan teknologi informasi dalam mendukung kebutuhan operasional perusahaan.
+
+Selain itu, saya memiliki pengalaman dalam administrasi event, registrasi peserta, verifikasi data, pelayanan pelanggan, dan koordinasi operasional. Saya juga memiliki pengalaman sebagai Social Media Specialist & Database Management, dengan tanggung jawab dalam perencanaan konten, pengelolaan media sosial, penyusunan jadwal publikasi, serta pengelolaan database dan dokumentasi digital perusahaan.
+
+Saya terbiasa menggunakan Microsoft Office, Google Workspace, Canva, dan Adobe Photoshop, serta memiliki pemahaman mengenai pengembangan website dan pengelolaan basis data.
+
+Saya merupakan pribadi yang teliti, adaptif, bertanggung jawab, komunikatif, dan memiliki kemauan belajar yang tinggi. Saya mampu bekerja secara mandiri maupun dalam tim serta siap mengembangkan kompetensi melalui pengalaman kerja langsung di lingkungan profesional.
+
+Melalui program MagangHub, saya berharap dapat memperdalam keterampilan, memperoleh pengalaman industri, dan memberikan kontribusi positif sesuai dengan kompetensi serta tanggung jawab yang diberikan.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EXPERIENCE ================= -->
+
+<section id="experience" class="py-20">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <h2 class="section-title">
+            Work <span class="gradient-text">Experience</span>
+        </h2>
+
+        <div class="timeline">
+
+
+            <!-- ANEKA MITRA CIPTA -->
+
+            <div class="timeline-item">
+
+                <div class="card">
+
+                    <div class="flex flex-wrap justify-between gap-3 mb-3">
+
+                        <div>
+
+                            <h3 class="text-xl font-bold text-white">
+                                PT Aneka Mitra Cipta
+                            </h3>
+
+                            <p class="text-blue-400 font-semibold">
+                                IT Specialist Intern
+                            </p>
+
+                        </div>
+
+                        <span class="text-sm text-slate-400">
+                            Mei 2025 – Agustus 2025
+                        </span>
+
+                    </div>
+
+                    <p class="text-slate-400 mb-4">
+
+                        Bertanggung jawab dalam mendukung kebutuhan operasional teknologi informasi, pengelolaan data, serta pengembangan sistem berbasis web.
+
+                    </p>
+
+                    <ul class="list-disc pl-5 text-slate-300 space-y-2 text-sm">
+
+                        <li>Melakukan data entry dan administrasi data perusahaan.</li>
+                        <li>Mengelola dan memperbarui database operasional.</li>
+                        <li>Membantu pengembangan website menggunakan PHP, HTML, CSS, dan JavaScript.</li>
+                        <li>Melakukan troubleshooting perangkat keras dan perangkat lunak.</li>
+                        <li>Mendukung kebutuhan teknis dan sistem informasi perusahaan.</li>
+
+                    </ul>
+
+                    <div class="mt-4">
+                        <span class="tag">Data Entry</span>
+                        <span class="tag">Database Management</span>
+                        <span class="tag">PHP</span>
+                        <span class="tag">HTML & CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">IT Support</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RISING STAR -->
+
+            <div class="timeline-item">
+
+                <div class="card">
+
+                    <div class="mb-3">
+
+                        <h3 class="text-xl font-bold text-white">
+                            Rising Star
+                        </h3>
+
+                        <p class="text-blue-400 font-semibold">
+                            Staff Admin Registrasi (Event)
+                        </p>
+
+                    </div>
+
+                    <p class="text-slate-400 mb-4">
+
+                        Mendukung kelancaran proses administrasi dan registrasi peserta selama kegiatan event berlangsung.
+
+                    </p>
+
+                    <ul class="list-disc pl-5 text-slate-300 space-y-2 text-sm">
+
+                        <li>Menangani proses registrasi dan registrasi ulang peserta.</li>
+                        <li>Melakukan verifikasi tiket dan data peserta.</li>
+                        <li>Mengelola data kehadiran peserta selama event.</li>
+                        <li>Membantu mengatasi kendala administrasi registrasi di lokasi acara.</li>
+                        <li>Berkoordinasi dengan tim event serta memberikan pelayanan kepada pengunjung.</li>
+
+                    </ul>
+
+                    <div class="mt-4">
+                        <span class="tag">Event Administration</span>
+                        <span class="tag">Registration</span>
+                        <span class="tag">Data Verification</span>
+                        <span class="tag">Customer Service</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FREELANCE -->
+
+            <div class="timeline-item">
+
+                <div class="card">
+
+                    <div class="flex flex-wrap justify-between gap-3 mb-3">
+
+                        <div>
+
+                            <h3 class="text-xl font-bold text-white">
+                                Pengelola Layanan Jasa Digital & Akademik
+                            </h3>
+
+                            <p class="text-blue-400 font-semibold">
+                                Freelance
+                            </p>
+
+                        </div>
+
+                        <span class="text-sm text-slate-400">
+                            2025 – Sekarang
+                        </span>
+
+                    </div>
+
+                    <p class="text-slate-400 mb-4">
+
+                        Mengelola layanan jasa digital dan akademik dengan berfokus pada pelayanan pelanggan, administrasi pesanan, serta pembuatan materi visual.
+
+                    </p>
+
+                    <ul class="list-disc pl-5 text-slate-300 space-y-2 text-sm">
+
+                        <li>Memberikan konsultasi dan pelayanan kepada pelanggan.</li>
+                        <li>Mengelola pesanan, pembayaran, serta tenggat waktu pekerjaan.</li>
+                        <li>Membuat desain promosi dan materi presentasi menggunakan Canva dan Photoshop.</li>
+                        <li>Menangani pertanyaan, permintaan, dan keluhan pelanggan.</li>
+                        <li>Memastikan layanan berjalan sesuai kebutuhan dan kesepakatan dengan klien.</li>
+
+                    </ul>
+
+                    <div class="mt-4">
+                        <span class="tag">Customer Service</span>
+                        <span class="tag">Digital Services</span>
+                        <span class="tag">Canva</span>
+                        <span class="tag">Adobe Photoshop</span>
+                        <span class="tag">Administration</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PT MASTERVOKAL INDONESIA -->
+
+            <div class="timeline-item">
+
+                <div class="card">
+
+                    <div class="flex flex-wrap justify-between gap-3 mb-4">
+
+                        <div>
+
+                            <h3 class="text-xl font-bold text-white">
+                                PT Mastervokal Indonesia
+                            </h3>
+
+                            <p class="text-blue-400 font-semibold">
+                                Social Media Specialist & Database Management
+                            </p>
+
+                            <p class="text-xs text-slate-500 mt-1">
+                                Artist Management & Digital Operations
+                            </p>
+
+                        </div>
+
+                        <span class="text-sm text-slate-400">
+                            September 2026 – Sekarang
+                        </span>
+
+                    </div>
+
+                    <p class="text-slate-400 leading-7 mb-6">
+
+                        Bertanggung jawab dalam mendukung seluruh kebutuhan manajemen artis dan calon artis, perencanaan konten digital, pengelolaan media sosial, serta pengelolaan database dan arsip digital perusahaan. Berperan dalam memastikan aktivitas manajemen artis dan operasional digital PT Mastervokal Indonesia berjalan secara terstruktur dan terdokumentasi dengan baik.
+
+                    </p>
+
+
+                    <div class="mb-6">
+
+                        <h4 class="font-bold text-white mb-3">
+                            <i class="fas fa-users text-blue-400 mr-2"></i>
+                            Artist Management Support
+                        </h4>
+
+                        <ul class="list-disc pl-5 text-slate-300 space-y-2 text-sm">
+
+                            <li>Mendukung kebutuhan manajemen seluruh artis maupun calon artis yang berada di bawah pengelolaan Mastervokal Indonesia.</li>
+                            <li>Mengelola kebutuhan publikasi, konten, dan aktivitas media sosial yang berkaitan dengan manajemen artis.</li>
+                            <li>Membantu mengatur kebutuhan informasi dan dokumentasi aktivitas artis.</li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="mb-6">
+
+                        <h4 class="font-bold text-white mb-3">
+                            <i class="fas fa-calendar-alt text-indigo-400 mr-2"></i>
+                            Content Planning & Social Media Management
+                        </h4>
+
+                        <ul class="list-disc pl-5 text-slate-300 space-y-2 text-sm">
+
+                            <li>Menyusun content planning untuk periode 30 hari atau satu bulan ke depan bagi artis, calon artis, maupun kebutuhan perusahaan.</li>
+                            <li>Merencanakan jenis konten, konsep, jadwal publikasi, serta kebutuhan materi dan perlengkapan produksi konten.</li>
+                            <li>Mengelola seluruh media sosial artis dan calon artis, termasuk upload Instagram Reels, postingan feed, serta publikasi konten digital lainnya.</li>
+                            <li>Mengelola media sosial yang berkaitan dengan PT Mastervokal Indonesia dan program-program perusahaan.</li>
+                            <li>Memastikan publikasi konten berjalan sesuai perencanaan dan kebutuhan komunikasi manajemen artis maupun perusahaan.</li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="mb-6">
+
+                        <h4 class="font-bold text-white mb-3">
+                            <i class="fas fa-database text-amber-400 mr-2"></i>
+                            Database Management & Digital Documentation
+                        </h4>
+
+                        <ul class="list-disc pl-5 text-slate-300 space-y-2 text-sm">
+
+                            <li>Mengelola database dan arsip digital perusahaan menggunakan Google Drive.</li>
+                            <li>Menyusun dan mengorganisasi dokumen manajemen artis maupun calon artis.</li>
+                            <li>Mengelola dokumentasi event-event penting dan kegiatan perusahaan.</li>
+                            <li>Mengelola database serta dokumentasi Unisound Children Choir dan kegiatan terkait.</li>
+                            <li>Mengelola data dan dokumen kegiatan Private Class Mastervokal.</li>
+                            <li>Memastikan seluruh dokumen tersusun secara rapi, terstruktur, dan mudah diakses sesuai kebutuhan operasional.</li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="mt-5">
+
+                        <span class="tag">Artist Management</span>
+                        <span class="tag">Content Planning</span>
+                        <span class="tag">Social Media Management</span>
+                        <span class="tag">Instagram Reels</span>
+                        <span class="tag">Database Management</span>
+                        <span class="tag">Google Drive</span>
+                        <span class="tag">Digital Documentation</span>
+                        <span class="tag">Event Management Support</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills" class="py-20 bg-slate-900/50">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <h2 class="section-title">
+            My <span class="gradient-text">Skills</span>
+        </h2>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+
+
+            <div class="card">
+
+                <i class="fas fa-table text-3xl text-blue-400 mb-4"></i>
+
+                <h3 class="font-bold text-lg mb-3">
+                    Manajemen Data & Administrasi
+                </h3>
+
+                <p class="text-sm text-slate-400 leading-7">
+
+                    Data Entry, Sales Data Management, Microsoft Excel, Word, PowerPoint, administrasi dokumen, dan ketelitian pengolahan data.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <i class="fas fa-calendar-check text-3xl text-indigo-400 mb-4"></i>
+
+                <h3 class="font-bold text-lg mb-3">
+                    Administrasi Event & Layanan Pelanggan
+                </h3>
+
+                <p class="text-sm text-slate-400 leading-7">
+
+                    Registration, On-site Event Administration, Customer Service, Participant Verification, Scheduling, Booking, dan Time Management.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <i class="fas fa-cloud text-3xl text-amber-400 mb-4"></i>
+
+                <h3 class="font-bold text-lg mb-3">
+                    Database & Cloud
+                </h3>
+
+                <p class="text-sm text-slate-400 leading-7">
+
+                    Operational Database Management, Google Drive Management, Digital Documentation, dan Alibaba Cloud Certified.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <i class="fas fa-code text-3xl text-purple-400 mb-4"></i>
+
+                <h3 class="font-bold text-lg mb-3">
+                    Web & Hardware
+                </h3>
+
+                <p class="text-sm text-slate-400 leading-7">
+
+                    HTML, CSS, PHP, Laravel, Vue.js, C++, C#, JavaScript, Python, Arduino, ESP32, Sensor, dan GPS Integration.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <i class="fas fa-tools text-3xl text-green-400 mb-4"></i>
+
+                <h3 class="font-bold text-lg mb-3">
+                    IT Support
+                </h3>
+
+                <p class="text-sm text-slate-400 leading-7">
+
+                    Hardware Troubleshooting, Software Troubleshooting, Maintenance, dan dukungan sistem teknologi informasi.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <i class="fas fa-palette text-3xl text-pink-400 mb-4"></i>
+
+                <h3 class="font-bold text-lg mb-3">
+                    Desain & Digital Content
+                </h3>
+
+                <p class="text-sm text-slate-400 leading-7">
+
+                    Canva, Google Sites, Adobe Photoshop, Corel Draw, Content Planning, Social Media Management, dan Digital Publication.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ACADEMIC PROJECTS ================= -->
+
+<section id="projects" class="py-20">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <h2 class="section-title">
+            Academic <span class="gradient-text">Projects</span>
+        </h2>
+
+
+        <!-- ACADEMIC PROJECT GRID -->
+
+        <div class="project-grid">
+
+
+            <!-- PROJECT 1 -->
+
+            <article class="project-card">
+
+                <img
+                    src="rentalbuku.jpg"
+                    onerror="this.src='https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=700'"
+                    alt="Aplikasi Mobile Rental Buku"
+                    class="project-image"
+                >
+
+                <h3>
+                    Aplikasi Mobile Rental Buku
+                </h3>
+
+                <p>
+                    Pengembangan aplikasi mobile untuk mendukung proses penyewaan dan pengelolaan informasi buku.
+                </p>
+
+                <span class="tag">
+                    Mobile Application
+                </span>
+
+            </article>
+
+
+            <!-- PROJECT 2 -->
+
+            <article class="project-card">
+
+                <img
+                    src="web2.jpg"
+                    onerror="this.src='https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=700'"
+                    alt="Website Layanan Kesehatan"
+                    class="project-image"
+                >
+
+                <h3>
+                    Website Layanan Kesehatan
+                </h3>
+
+                <p>
+                    Pengembangan website layanan kesehatan dengan konsep dan fitur yang terinspirasi dari platform Halodoc.
+                </p>
+
+                <span class="tag">
+                    Web Development
+                </span>
+
+            </article>
+
+
+            <!-- PROJECT 3 -->
+
+            <article class="project-card">
+
+                <img
+                    src="figma .jpg"
+                    onerror="this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=700'"
+                    alt="UI UX E-commerce Watch"
+                    class="project-image"
+                >
+
+                <h3>
+                    UI/UX E-commerce Watch
+                </h3>
+
+                <p>
+                    Perancangan tampilan dan pengalaman pengguna untuk platform e-commerce produk jam tangan menggunakan Figma.
+                </p>
+
+                <span class="tag">
+                    UI/UX Design
+                </span>
+
+            </article>
+
+
+            <!-- PROJECT 4 -->
+
+            <article class="project-card">
+
+                <img
+                    src="biodata.jpg"
+                    onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700'"
+                    alt="Personal Biodata Website"
+                    class="project-image"
+                >
+
+                <h3>
+                    Personal Biodata Website
+                </h3>
+
+                <p>
+                    Pembuatan website personal untuk menampilkan informasi profil dan biodata secara digital.
+                </p>
+
+                <span class="tag">
+                    HTML &amp; CSS
+                </span>
+
+            </article>
+
+
+            <!-- PROJECT 5 -->
+
+            <article class="project-card">
+
+                <img
+                    src="Praktikum kabel LAN.jpg"
+                    onerror="this.src='https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=700'"
+                    alt="LAN Cable and Networking"
+                    class="project-image"
+                >
+
+                <h3>
+                    LAN Cable &amp; Networking
+                </h3>
+
+                <p>
+                    Praktik instalasi kabel jaringan LAN dan pemahaman dasar konfigurasi jaringan komputer.
+                </p>
+
+                <span class="tag">
+                    Networking
+                </span>
+
+            </article>
+
+
+            <!-- PROJECT 6 -->
+
+            <article class="project-card">
+
+                <img
+                    src="cloud2.png"
+                    onerror="this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=700'"
+                    alt="Cloud Computing"
+                    class="project-image"
+                >
+
+                <h3>
+                    Cloud Computing
+                </h3>
+
+                <p>
+                    Dokumentasi kegiatan dan pembelajaran mengenai teknologi cloud computing.
+                </p>
+
+                <a
+                    href="https://drive.google.com/file/d/1HeQdyhy9ZjwWjoPaKzIDGc5fZj9F5yzX/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                >
+
+                    <i class="fas fa-external-link-alt"></i>
+                    View 
+
+                </a>
+
+            </article>
+
+        </div>
+
+
+        <!-- PROFESSIONAL WEBSITE PROJECTS -->
+
+        <div class="professional-projects">
+
+            <h3 class="section-subtitle">
+                Professional <span class="gradient-text">Website Projects</span>
+            </h3>
+
+            <div class="professional-grid">
+
+
+                <!-- WEBSITE PROJECT 1 -->
+
+                <article class="professional-card">
+
+                    <div class="professional-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+
+                    <h4>
+                        Aneka Mitra Cipta – Project Portfolio
+                    </h4>
+
+                    <p>
+
+                        Website portofolio proyek magang yang menjadi salah satu dokumentasi hasil pekerjaan dan pengalaman dalam bidang teknologi informasi.
+
+                    </p>
+
+                    <a
+                        href="https://aneka-mitra-cipta.vercel.app"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-link"
+                    >
+
+                        <i class="fas fa-external-link-alt"></i>
+                        Visit Project Website
+
+                    </a>
+
+                </article>
+
+
+                <!-- WEBSITE PROJECT 2 -->
+
+                <article class="professional-card">
+
+                    <div class="professional-icon indigo">
+                        <i class="fas fa-globe"></i>
+                    </div>
+
+                    <h4>
+                        Aneka Mitra Cipta – Official Website
+                    </h4>
+
+                    <p>
+
+                        Website resmi Aneka Mitra Cipta sebagai referensi proyek dan dokumentasi lingkungan kerja profesional.
+
+                    </p>
+
+                    <a
+                        href="https://www.anekamitracipta.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-link"
+                    >
+
+                        <i class="fas fa-external-link-alt"></i>
+                        Visit Official Website
+
+                    </a>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= RESEARCH ================= -->
+
+<section class="py-20 bg-slate-900/50">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <h2 class="section-title">
+            Research & <span class="gradient-text">Final Project</span>
+        </h2>
+
+        <div class="card">
+
+            <div class="flex flex-wrap justify-between gap-3 mb-5">
+
+                <div>
+
+                    <h3 class="text-xl md:text-2xl font-bold text-white">
+                        Sistem Monitoring Lansia Berbasis IoT
+                    </h3>
+
+                    <p class="text-blue-400 mt-2 font-semibold">
+                        Final Project / Skripsi
+                    </p>
+
+                </div>
+
+                <span class="text-sm text-slate-400">
+                    2025 – 2026
+                </span>
+
+            </div>
+
+            <p class="text-slate-400 leading-8 mb-5">
+
+                Penelitian dan pengembangan sistem monitoring lansia berbasis Internet of Things (IoT) yang dirancang untuk membantu memantau aktivitas serta memberikan informasi ketika terdeteksi kondisi yang membutuhkan perhatian. Sistem memanfaatkan sensor gerak dan koordinat darurat untuk mendukung pemantauan serta penyampaian notifikasi.
+
+            </p>
+
+            <ul class="list-disc pl-5 text-slate-300 space-y-2 text-sm">
+
+                <li>Mengintegrasikan sensor gerak untuk mendeteksi aktivitas pengguna.</li>
+
+                <li>Menggunakan GPS untuk memperoleh informasi koordinat lokasi secara real-time.</li>
+
+                <li>Mengembangkan sistem notifikasi otomatis melalui WhatsApp dan Telegram API.</li>
+
+                <li>Mengolah data dan merancang algoritma untuk membedakan aktivitas normal dengan kondisi kritis atau darurat.</li>
+
+                <li>Menyusun dokumentasi dan data penelitian selama proses pengembangan sistem.</li>
+
+            </ul>
+
+            <div class="mt-5">
+
+                <span class="tag">ESP32</span>
+                <span class="tag">IoT & Sensors</span>
+                <span class="tag">GPS Real-Time</span>
+                <span class="tag">WhatsApp API</span>
+                <span class="tag">Telegram API</span>
+                <span class="tag">Data Analysis</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EDUCATION & CERTIFICATION ================= -->
+
+<section id="education" class="py-20 bg-slate-900/50">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <h2 class="section-title">
+            Education & <span class="gradient-text">Certification</span>
+        </h2>
+
+
+        <div class="grid md:grid-cols-2 gap-6">
+
+
+            <!-- EDUCATION -->
+
+            <div class="card">
+
+                <i class="fas fa-graduation-cap text-3xl text-blue-400 mb-5"></i>
+
+                <h3 class="text-xl font-bold mb-2">
+                    Universitas Advent Indonesia
+                </h3>
+
+                <p class="text-blue-400 font-semibold">
+                    S1 Teknik Informatika
+                </p>
+
+                <p class="text-slate-400 text-sm mt-3">
+                    2022 – Juni 2026
+                </p>
+
+                <div class="mt-5">
+
+                    <span class="tag">IPK 3.51</span>
+                    <span class="tag">Cumlaude</span>
+                    <span class="tag">Bachelor Degree</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ALIBABA CLOUD -->
+
+            <div class="card">
+
+                <i class="fas fa-certificate text-3xl text-amber-400 mb-5"></i>
+
+                <h3 class="text-xl font-bold mb-2">
+                    Alibaba Cloud International Certificate
+                </h3>
+
+                <p class="text-blue-400 font-semibold">
+                    Alibaba Cloud Certified Associate
+                </p>
+
+                <p class="text-slate-400 text-sm mt-3">
+                    International Certification
+                </p>
+
+                <div class="mt-5">
+
+                    <span class="tag">Cloud Computing</span>
+                    <span class="tag">Cloud Technology</span>
+
+                </div>
+
+                <a
+                    href="alibaba cloud.jpeg"
+                    target="_blank"
+                    class="inline-block mt-5 text-blue-400 hover:text-blue-300 text-sm font-semibold"
+                >
+
+                    <i class="fas fa-external-link-alt mr-2"></i>
+                    View Certificate
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- ADDITIONAL CERTIFICATIONS -->
+
+        <div class="mt-10">
+
+            <h3 class="text-2xl font-extrabold mb-6">
+                Additional <span class="gradient-text">Certifications</span>
+            </h3>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+
+                <!-- TOEFL -->
+
+                <div class="card">
+
+                    <i class="fas fa-language text-3xl text-blue-400 mb-4"></i>
+
+                    <h4 class="font-bold mb-2">
+                        TOEFL Certificate
+                    </h4>
+
+                    <p class="text-sm text-slate-400 mb-4">
+                        English language proficiency certification.
+                    </p>
+
+                    <a
+                        href="toefl.jpeg"
+                        target="_blank"
+                        class="text-blue-400 text-sm font-semibold"
+                    >
+
+                        View Certificate
+                        <i class="fas fa-arrow-right ml-1"></i>
+
+                    </a>
+
+                </div>
+
+
+                <!-- INTERNSHIP -->
+
+                <div class="card">
+
+                    <i class="fas fa-briefcase text-3xl text-indigo-400 mb-4"></i>
+
+                    <h4 class="font-bold mb-2">
+                        Internship Certificate
+                    </h4>
+
+                    <p class="text-sm text-slate-400 mb-4">
+                        Documentation of internship experience.
+                    </p>
+
+                    <a
+                        href="intership.jpeg"
+                        target="_blank"
+                        class="text-blue-400 text-sm font-semibold"
+                    >
+
+                        View Certificate
+                        <i class="fas fa-arrow-right ml-1"></i>
+
+                    </a>
+
+                </div>
+
+
+                <!-- DATA ANALYSIS -->
+
+                <div class="card">
+
+                    <i class="fas fa-chart-line text-3xl text-amber-400 mb-4"></i>
+
+                    <h4 class="font-bold mb-2">
+                        Data Analysis
+                    </h4>
+
+                    <p class="text-sm text-slate-400 mb-4">
+                        Supporting certification in data analysis.
+                    </p>
+
+                    <a
+                        href="MySkil certification.jpeg"
+                        target="_blank"
+                        class="text-blue-400 text-sm font-semibold"
+                    >
+
+                        View Certificate
+                        <i class="fas fa-arrow-right ml-1"></i>
+
+                    </a>
+
+                </div>
+
+
+                <!-- MANDARIN -->
+
+                <div class="card">
+
+                    <i class="fas fa-briefcase text-3xl text-indigo-400 mb-4"></i>
+
+                    <h4 class="font-bold mb-2">
+                        Mandarin Certificate
+                    </h4>
+
+                    <p class="text-sm text-slate-400 mb-4">
+                        Certificate of Participation – Mandarin Language.
+                    </p>
+
+                    <a
+                        href="certificate bahasa mandarin.jpg"
+                        target="_blank"
+                        class="text-blue-400 text-sm font-semibold"
+                    >
+
+                        View Certificate
+                        <i class="fas fa-arrow-right ml-1"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="py-20">
+
+    <div class="max-w-5xl mx-auto px-6 text-center">
+
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-5">
+            Let's Work <span class="gradient-text">Together</span>
+        </h2>
+
+        <p class="text-slate-400 leading-8 max-w-2xl mx-auto mb-8">
+
+            Saya terbuka untuk kesempatan kerja, kolaborasi, dan pengalaman baru yang dapat mengembangkan kemampuan serta memberikan kontribusi positif.
+
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4">
+
+            <a
+                href="https://wa.me/6282213959693"
+                target="_blank"
+                class="bg-blue-600 hover:bg-blue-700 px-7 py-3 rounded-xl font-bold transition"
+            >
+
+                <i class="fab fa-whatsapp mr-2"></i>
+                WhatsApp
+
+            </a>
+
+            <a
+                href="https://www.linkedin.com/in/chyntiatampubolon"
+                target="_blank"
+                class="border border-slate-600 hover:border-blue-400 px-7 py-3 rounded-xl font-bold transition"
+            >
+
+                <i class="fab fa-linkedin mr-2"></i>
+                LinkedIn
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', function () {
+
+        mobileMenu.classList.toggle('hidden');
+
+        const icon = menuBtn.querySelector('i');
+
+        if (mobileMenu.classList.contains('hidden')) {
+
+            icon.classList.remove('fa-xmark');
+            icon.classList.add('fa-bars');
+
+        } else {
+
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-xmark');
+
+        }
+
+    });
+
+
+    // Tutup menu setelah memilih navigasi
+
+    document.querySelectorAll('#mobileMenu a').forEach(function (link) {
+
+        link.addEventListener('click', function () {
+
+            mobileMenu.classList.add('hidden');
+
+            const icon = menuBtn.querySelector('i');
+
+            icon.classList.remove('fa-xmark');
+            icon.classList.add('fa-bars');
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
